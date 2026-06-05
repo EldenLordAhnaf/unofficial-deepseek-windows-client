@@ -20,42 +20,37 @@
     "electron-updater": "^6.1.7"
   },
   "build": {
-    "appId": "com.deepseek.unofficial-deepseek",
-    "productName": "DeepSeek Unofficial Client",
-    "directories": {
-      "output": "dist"
-    },
-    "files": [
-      "**/*",
-      "!**/.vscode/*",
-      "!**/*.md",
-      "!**/.gitignore",
-      "!**/node_modules/.cache",
-      "!**/dist/*"
+  "appId": "com.deepseek.unofficial-deepseek",
+  "productName": "DeepSeek Unofficial",
+  "directories": {
+    "output": "dist"
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
     ],
-    "win": {
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64"
-          ]
-        }
-      ],
-      "icon": "icon.ico"
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true,
-      "createStartMenuShortcut": true,
-      "shortcutName": "DeepSeek Unofficial"
-    },
-    "publish": {
-      "provider": "github",
-      "owner": "EldenLordAhnaf",
-      "repo": "unofficial-deepseek-windows-client",
-      "releaseType": "release"
-    }
+    "icon": "icon.ico"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
+  },
+  "portable": {
+    "artifactName": "${productName}-${version}-portable.zip"
+  },
+  "publish": {
+    "provider": "github",
+    "owner": "EldenLordAhnaf",
+    "repo": "unofficial-deepseek-windows-client"
   }
+}
 }
