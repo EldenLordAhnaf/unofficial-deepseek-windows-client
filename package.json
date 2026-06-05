@@ -1,0 +1,61 @@
+{
+  "name": "unofficial-deepseek-windows-client",
+  "version": "1.0.0",
+  "description": "Unofficial DeepSeek desktop client for Windows",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --publish never",
+    "build:win": "electron-builder --win --publish never",
+    "dist": "electron-builder --win --publish always"
+  },
+  "author": "Ahnaf",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^42.3.3",
+    "electron-builder": "^26.8.1"
+  },
+  "dependencies": {
+    "electron-settings": "^4.0.4",
+    "electron-updater": "^6.1.7"
+  },
+  "build": {
+    "appId": "com.deepseek.unofficial-deepseek",
+    "productName": "DeepSeek Unofficial Client",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!**/.vscode/*",
+      "!**/*.md",
+      "!**/.gitignore",
+      "!**/node_modules/.cache",
+      "!**/dist/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "DeepSeek Unofficial"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "EldenLordAhnaf",
+      "repo": "unofficial-deepseek-windows-client",
+      "releaseType": "release"
+    }
+  }
+}
