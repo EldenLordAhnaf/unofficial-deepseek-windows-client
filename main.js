@@ -34,10 +34,11 @@ async function createWindow() {
         height: 1080,
         icon: path.join(__dirname, 'icon.ico'),
         webPreferences: {
-            nodeIntegration: false,
-            contextIsolation: true,
-            preload: path.join(__dirname, 'preload.js')
-        },
+        nodeIntegration: false,
+        contextIsolation: true,
+        preload: path.join(__dirname, 'preload.js'),
+        partition: 'persist:deepseek'
+    },
         title: 'DeepSeek (Unofficial Client)'
     });
 
