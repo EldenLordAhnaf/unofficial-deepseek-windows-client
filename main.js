@@ -82,7 +82,7 @@ async function createWindow() {
     });
 
     mainWindow.on('close', (event) => {
-        if (process.platform !== 'darwin') {
+        if (process.platform !== 'darwin'  && !app.isQuitting) {
             event.preventDefault();
             mainWindow.hide();
         }
