@@ -1,6 +1,6 @@
 {
   "name": "unofficial-deepseek-windows-client",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Unofficial DeepSeek desktop client for Windows",
   "main": "main.js",
   "scripts": {
