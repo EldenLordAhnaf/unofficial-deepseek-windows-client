@@ -10,6 +10,6 @@ This desktop client transforms the web interface into a native, high-performance
 *   **💬 Tray Quick-Actions:** Right-click the system tray icon to instantly trigger a **New Chat**, open settings, or quit the application.
 *   **🌓 Native Theme Sync:** Built-in settings panel to toggle between **Light**, **Dark**, or **System Auto** themes that adapt on the fly.
 *   **🤖 Background Auto-Updates:** Silent background integration checking for updates every 4 hours.
-*   **🚫 Multi-Instance Prevention:** Process checking locks the app to a single instance, automatically maximizing your active client if you click the shortcut again.
+*   **🚫 Multi-Instance Prevention:** Process checking locks the app to a single instance, automatically maximizing the active client if one clicks the shortcut again.
 
 This application is not created by, affiliated with, or supported by DeepSeek (深度求索)
